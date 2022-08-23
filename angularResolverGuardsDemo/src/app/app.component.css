@@ -1,0 +1,11 @@
+.navbar-light .navbar-nav .nav-link.active {
+  color: red;
+  font-weight: bold;
+}
+.spinner-border{
+  font-size:100%;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  z-index:10
+}
