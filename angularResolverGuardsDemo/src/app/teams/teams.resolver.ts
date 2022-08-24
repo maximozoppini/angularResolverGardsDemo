@@ -23,7 +23,6 @@ export class TeamsResolver implements Resolve<ResolvedTeam> {
       state: RouterStateSnapshot --> let you navigate through the url tree
     */
 
-    //
     return this.teamsService.getTeams().pipe(
       map(teams => ({teams}))
     );
