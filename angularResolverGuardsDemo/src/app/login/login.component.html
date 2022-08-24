@@ -1,1 +1,60 @@
-<p>login works!</p>
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+
+  <div class="card-body">
+    <form [formGroup]="loginForm">
+      <fieldset>
+
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label"
+                 for="username">User Name</label>
+          <div class="col-md-8">
+            <input class="form-control"
+                  formControlName="username"
+                    type="text"
+                   placeholder="User Name (required)"
+                    />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-2 col-form--label"
+                 for="password">Password</label>
+
+          <div class="col-md-8">
+            <input class="form-control"
+              formControlName="password"
+                   id="passwordId"
+                   type="password"
+                   placeholder="Password (required)"
+                   name="password" />
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 offset-md-2">
+            <button class="btn btn-primary mr-3"
+                    style="width:80px"
+                    [disabled]="!loginForm?.valid"
+                    (click)="submitForm()">
+              Log In
+            </button>
+            <button class="btn btn-outline-secondary"
+                    type="button"
+                    style="width:80px"
+                    [routerLink]="['/home']">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <!-- <div class="alert alert-danger"
+       *ngIf="errorMessage">{{errorMessage}}
+  </div> -->
+</div>

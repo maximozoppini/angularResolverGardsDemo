@@ -1,1 +1,30 @@
-<p>teams works!</p>
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table mb-0"
+             *ngIf="teams && teams.length">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>Id</th>
+            <th>Description</th>
+            <th>Participants</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let team of teams">
+            <td>{{team.name}}</td>
+            <td>{{team.id }}</td>
+            <td>{{team.description }}</td>
+            <td>{{team.participants}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
